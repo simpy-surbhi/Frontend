@@ -1,0 +1,84 @@
+<div style="background: cornflowerblue; margin-top: 20px; padding: 6px;">
+  <div class="h1"><label class="title">Add New Question</label></div>
+</div>
+<br />
+<div>
+  <div class="heightDropDown">
+    <select [(ngModel)]="selectedOption" class="selectWrapper">
+      <option value="-1" disabled selected>Select your Option</option>
+      <option *ngFor="let exam of exams; let i = index" [value]="i + 1">{{
+        exam.title
+      }}</option>
+    </select>
+    <input
+      [(ngModel)]="question.title"
+      type="text"
+      placeholder="Please Type your Question"
+      class="heighttext"
+      required
+    />
+  </div>
+
+  <div class="OptionsDiv">
+    <input
+      type="email"
+      placeholder="Please Enter Option"
+      class="heightform"
+      [(ngModel)]="choice.choice"
+      required
+    />
+    <div class="heightDropDownForm1">
+      <select [(ngModel)]="selectedOptionTrue" class="selectWrapper1">
+        <option value="-1" disabled selected>Select Your Option</option>
+        <option value="0">True</option>
+        <option value="1">False</option>
+      </select>
+    </div>
+    <button (click)="addOption()" type="button" class="buttonForm">
+      Add Option
+    </button>
+    <br />
+    <div>
+      <br />
+      <b>Option and Answer will display down!!</b>
+      <table class="examtable">
+        <thead>
+          <tr style="position: relative;">
+            <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Number
+            </th>
+            <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Option
+            </th>
+            <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Correct Answer
+            </th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let item of choices; let i = index"
+          style="position: relative; border: 2px solid black;"
+        >
+          <td style="width: 50px; border: 2px solid black; text-align: center;">
+            {{ i + 1 }}
+          </td>
+          <td style="padding: 10px; border: 2px solid black;">
+            {{ item.choice }}
+          </td>
+          <td style="padding: 10px; width: 70px; border: 2px solid black;">
+            {{ item.valid }}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <br />
+  <br />
+  <button (click)="submit()" type="button" class="button">Submit</button>
+</div>

@@ -1,0 +1,57 @@
+.heighttext {
+  display: inline-block;
+  padding: 15px 10px;
+  line-height: 20px;
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 15px;
+  margin-left: 230px;
+}
+
+.h1 {
+  width: 100%;
+  background-color: mediumaquamarine;
+  margin-bottom: 70px;
+}
+
+.button {
+  background-color: cornflowerblue; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-left: 284px;
+}
+
+.main {
+  position: absolute;
+  width: 51%;
+  z-index: 15;
+  top: 40%;
+  right: 23%;
+  margin: -100px 0 0 -150px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #6f6969;
+}
+
+.error {
+  width: 100%;
+}
+
+.register {
+  margin-left: 20%;
+}
+
+label {
+  margin-top: 10px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}

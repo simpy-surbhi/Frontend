@@ -1,0 +1,248 @@
+<div
+  style="
+    background-color: thistle;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  "
+>
+  <div class="header"><label class="headerlabel">Quiz Manager</label></div>
+  <br /><br />
+  <div>
+    <button (click)="examClick()" id="examList" class="exambutton">
+      <label>Exam List</label></button
+    >&nbsp;&nbsp;
+    <button (click)="questionClick()" id="questionList" class="button">
+      <label>Question List</label>
+    </button>
+    &nbsp;&nbsp;
+    <button (click)="add()" class="addbutton">
+      <label id="addList"> Add New</label>
+    </button>
+  </div>
+  <div class="main">
+    <div class="options" *ngIf="this.title == 'Question'">
+      <div style="width: 100%; margin-top: 20px;">
+        <!-- <label style="width: 100%; margin-left: 20%; font-size: 25px;"
+          >MCQ Options</label
+        > -->
+      </div>
+      <br /><br />
+      <!-- <table class="examtable">
+        <tr
+          *ngFor="let item of choices; let i = index"
+          style="position: relative;"
+        >
+          <td style="width: 50px; text-align: center; border: 2px solid black;">
+            {{ i + 1 }}
+          </td>
+          <td style="padding: 10px; border: 2px solid black;">
+            {{ item.choice }}
+          </td>
+          <td>
+            <img
+              style="
+                margin-left: 20px;
+                margin-top: 5px;
+                border: 2px solid black;
+              "
+              [src]="
+                item.valid ? '/assets/correctNew.png' : '/assets/wrong.png'
+              "
+              width="30px"
+              height="30px"
+            />
+          </td>
+        </tr>
+      </table> -->
+    </div>
+  </div>
+  <div class="exambody">
+    <div class="heighttext">
+      <!-- <label class="labelTitle">{{ title }}</label>
+      <button (click)="add()" type="button" class="addButton">
+        Add New Exam
+      </button> -->
+    </div>
+    <div *ngIf="this.title == 'Exam'">
+      <table class="examtable">
+        <thead>
+          <tr style="position: relative;">
+            <!-- <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Id
+            </th> -->
+            <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Exam Name
+            </th>
+            <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Exam Update
+            </th>
+            <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Exam Delete
+            </th>
+          </tr>
+        </thead>
+        <tr *ngFor="let item of ItemsArray" style="position: relative;">
+          <!-- <td style="width: 50px; text-align: center; border: 2px solid black;">
+            {{ item.id }}
+          </td> -->
+          <td style="padding: 10px; border: 2px solid black;">
+            {{ item.title }}
+          </td>
+          <td style="width: 22%; border: 2px solid black;">
+            <button
+              (click)="edit($event)"
+              type="button"
+              class="tableButtonEdit"
+              style="
+                width: 46%;
+                height: 40px;
+                background-color: cornflowerblue;
+                margin: 10px;
+                margin-left: 47px;
+                border-radius: 10px;
+              "
+              id="{{ item.id }}"
+            >
+              Edit
+            </button>
+          </td>
+          <td style="width: 22%; border: 2px solid black;">
+            <button
+              (click)="delete($event)"
+              type="button"
+              class="tableButtonDelete"
+              style="
+                width: 46%;
+                height: 40px;
+                background-color: cornflowerblue;
+                margin: 10px;
+                margin-left: 47px;
+                border-radius: 10px;
+              "
+              id="{{ item.id }}"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div *ngIf="this.title == 'Question'" id="questionOption">
+      <table class="examtable">
+        <thead>
+          <tr style="position: relative;">
+            <!-- <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Id
+            </th> -->
+            <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Question List
+            </th>
+            <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Check Option For each Question
+            </th>
+            <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Delete Question
+            </th>
+          </tr>
+        </thead>
+        <tr *ngFor="let question of questions" style="position: relative;">
+          <!-- <td style="width: 50px; text-align: center; border: 2px solid black;">
+            {{ question.id }}
+          </td> -->
+          <td style="padding: 10px; border: 2px solid black;">
+            {{ question.title }}
+          </td>
+          <td style="width: 70px; border: 2px solid black;">
+            <button
+              (click)="edit($event)"
+              type="button"
+              class="tableButtonViewOptions"
+              id="{{ question.id }}"
+            >
+              View Options
+            </button>
+          </td>
+          <td style="width: 70px; border: 2px solid black;">
+            <button
+              (click)="delete($event)"
+              type="button"
+              class="tableButtonDelete"
+              id="{{ question.id }}"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </table>
+
+      <br />
+      <b>Click View Option:-</b>
+      <p>for Checking Question's Option and true answer!!</p>
+      <table class="examtable">
+        <thead>
+          <tr style="position: relative;">
+            <!-- <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Id
+            </th> -->
+            <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Number
+            </th>
+            <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              Option
+            </th>
+            <th
+              style="width: 50px; text-align: center; border: 2px solid black;"
+            >
+              True Or False
+            </th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let item of choices; let i = index"
+          style="position: relative;"
+        >
+          <td style="width: 50px; text-align: center; border: 2px solid black;">
+            Option {{ i + 1 }}
+          </td>
+          <td style="padding: 10px; border: 2px solid black;">
+            {{ item.choice }}
+          </td>
+          <td
+            style="margin-left: 20px; margin-top: 5px; border: 2px solid black;"
+          >
+            <img
+              style="width: 5%;"
+              [src]="
+                item.valid ? '/assets/correctNew.png' : '/assets/wrong.png'
+              "
+            />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

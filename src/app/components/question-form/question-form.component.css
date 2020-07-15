@@ -1,0 +1,165 @@
+.heighttext {
+  display: inline-block;
+  padding: 15px 10px;
+  line-height: 20px;
+  width: 365px;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+.h1 {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-left: 33%;
+}
+
+.main {
+  width: 300px;
+  margin-left: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  float: left;
+}
+
+.error {
+  width: 100%;
+}
+
+.register {
+  margin-left: 20%;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  margin-left: 35%;
+}
+
+.selectWrapper {
+  height: 50px;
+  width: 205px;
+  font-size: 15px;
+  margin-left: 276px;
+  margin-right: 10px;
+  border: 2px solid;
+  border-radius: 45px;
+  outline: none;
+  background: none;
+}
+.selectWrapper1 {
+  height: 50px;
+  width: 150px;
+  font-size: 15px;
+  border-radius: 45px;
+}
+table {
+  border-collapse: collapse;
+  float: center;
+}
+thead,
+td,
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}
+/* .heightDropDown{
+    display:inline-block;
+    border-radius: 50px;
+    border: 2px solid black;
+    overflow:hidden;
+    margin-left: 40px;
+    margin-bottom: 20px;
+} */
+
+.heightRadio {
+  margin-left: 40px;
+  height: 30px;
+  width: 220px;
+}
+
+.OptionsDiv {
+  width: 73%;
+  height: 100%;
+  margin-left: 171px;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.formDiv {
+  overflow: hidden;
+  height: 70px;
+}
+
+.heightform {
+  padding: 15px 10px;
+  line-height: 20px;
+  width: 50%;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 15px;
+  margin-left: 10px;
+  float: left;
+  margin-top: 10px;
+  margin-right: 1%;
+}
+
+.heightDropDownForm {
+  border-radius: 50px;
+  border: 2px solid black;
+  overflow: hidden;
+  width: 230px;
+  background-color: white;
+  margin-top: 10px;
+  float: left;
+}
+
+.heightDropDownForm1 {
+  border-radius: 50px;
+  border: 2px solid black;
+  background-color: white;
+  margin-top: 10px;
+  float: left;
+}
+.buttonForm {
+  background-color: blue; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-left: 1%;
+  margin-top: 10px;
+  height: 50px;
+}
+
+.tableButtonDelete {
+  width: 70px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.examtable {
+  width: 100%;
+  height: 100%;
+}

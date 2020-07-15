@@ -1,0 +1,21 @@
+<div class="main">
+  <div class="h1">
+    <label style="width: 100%; background-color: cornflowerblue;">{{
+      title
+    }}</label>
+  </div>
+  <!-- <div *ngIf="user.error" class="error"><h3 align="center" width = "100px"><font color="red">{{user.error}}</font></h3></div> -->
+  <b style="margin-left: 230px;">You can update your Exam Name</b><br /><br />
+  <input
+    [(ngModel)]="exam.title"
+    type="text"
+    placeholder="Please exam title"
+    class="heighttext"
+    required
+  />
+  <br />
+  <br />
+  <button (click)="submit()" type="button" class="button">
+    {{ buttonTitle }}
+  </button>
+</div>
